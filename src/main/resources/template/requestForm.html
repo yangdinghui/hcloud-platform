@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>面料开发单</title>
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei UI";
+            font-size: 12px;
+            max-width: 555px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .tableHeader {
+            border-collapse: collapse;
+            border: 1px solid #f3f3f3;
+        }
+
+        .tableHeader th,
+        .tableHeader td {
+            height: 50px;
+            line-height: 20px;
+            border: 1px solid #333;
+        }
+
+        .tableHeader th {
+            font-weight: bold;
+            background: #f8f9fd;
+            text-align: right;
+            color: #333;
+            padding-right: 12px;
+        }
+
+        .tableHeader td {
+            padding-left: 10px;
+        }
+
+        .wrap p {
+            color: #000;
+            margin: 12px 0 10px;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .rules {
+            font-size: 16px;
+        }
+
+        .tableHeader .column {
+            Writing-mode: tb-rl;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <h1 class="mb-10">苏州合祥纺织有限公司 面料开发单</h1>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0" class="tableHeader">
+        <tbody>
+        <tr>
+            <th width="20%">开发面料工厂名称</th>
+            <td width="32%">${userName}</td>
+            <th width="20%">开发依赖日期</th>
+            <td>${submitDate}</td>
+        </tr>
+        <tr>
+            <th width="20%">联系人</th>
+            <td width="32%">${userName}</td>
+            <th width="20%">要求完成日期</th>
+            <td>${submitDate}</td>
+        </tr>
+        <tr>
+            <th width="20%">开发面料用途</th>
+            <td width="32%">${userName}</td>
+            <th width="20%">公司开发流水号</th>
+            <td>${submitDate}</td>
+        </tr>
+        <tr>
+            <th rowspan="13" class="column">具体开发要求</th>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <th>主管确认</th>
+            <td>${headerName}</td>
+            <th>业务员</th>
+            <td>${agentName}</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0" class="detailstbl">
+      <tbody>
+        <tr>
+          <th width="8%">序号</th>
+          <th>发票类型</th>
+          <th width="10%">发票张数</th>
+          <th width="12%">发票金额</th>
+          <th width="12%">报销金额</th>
+          <th>专票税额</th>
+          <th width="28%">用途</th>
+        </tr>
+        <#list receiptList as item>
+          <tr>
+            <td>${list_index+1}</td>
+            <td>${item.receiptType}</td>
+            <td>1</td>
+            <td>¥${item.amount}</td>
+            <td>¥${item.amount}</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </#list>
+        <tr>
+          <td colspan="2" class="sum">总报销金额（小写）</td>
+          <td colspan="5" class="sumdata">¥259.46</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="sum">总报销金额（大写）</td>
+          <td colspan="5" class="sumdata">贰佰伍拾玖元肆角陆分</td>
+        </tr>
+      </tbody>
+    </table> -->
+</div>
+</body>
+
+</html>

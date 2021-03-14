@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hcloud.platform.modules.plalog.dao.PlaLogDao">
+    <!-- 根据传入的会员memCode，查询会员信息 -->
+    <select id="list"
+            resultType="hcloud.platform.modules.plalog.model.dto.PlaLogListDto">
+        SELECT
+            A.logCode
+            ,DATE_FORMAT(A.logTime,'%Y-%m-%d %H:%i:%s') AS 'logTime'
+            ,IFNULL(A.funcName,'') AS 'funcName'
+            ,A.userCode
+            ,IFNULL(A.logType,'') AS 'logType'
+            ,IFNULL(A.logDescription,'') AS 'logDescription'
+        ,IFNULL(A.logParma,'') AS 'logParma'
+        ,IFNULL(A.userName,'') AS 'userName'
+        FROM
+        pla_log AS A
+    </select>
+ </mapper>

@@ -1,0 +1,82 @@
+server:
+  port: 8689
+management:
+  endpoints:
+    web:
+      exposure:
+        include: shutdown
+  server:
+    port: 8889
+spring:
+  profiles:
+    active: dev
+  redis:
+    host: 139.224.62.94
+    port: 6379
+    password: "123456"
+    database: 1
+    timeout: 1800ms #连接超时时间
+    lettuce:
+      pool:
+        max-active: 8 #连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-idle: 8 #连接池中的最大空闲连接 默认 8
+        max-wait: 1000ms #连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        min-idle: 6 #连接池中的最小空闲连接 默认 0
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: hh1024hh@
+    url: jdbc:mysql://139.224.62.94/hcloud_pf?useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接池配置
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 30
+      ######Druid监控配置######
+      web-stat-filter:
+        enabled: true
+        #哪些资源配置监控：主要只静态资源和监控地址本身
+        #exclusions: *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*
+      stat-view-servlet:
+        #IP 白名单
+        allow: 127.0.0.1
+        #IP 黑名单
+        #deny: 192.168.0.101
+  #es
+  #  elasticsearch:
+  #    rest:
+  #      uris: http://localhost:9200
+  #      username: elastic
+  #      password: 123456
+  mail:
+    username: 1004329447@qq.com  # 自己邮箱地址
+    password: zjcrzdcxjbfubbfd        # SMTP|POP3|IMAP协议授权码
+    host: smtp.qq.com        # 服务器地址。参考邮箱服务运营商提供的信息。
+    properties:
+      mail:
+        smtp:
+          auth: true          # 开启smtp协议验证
+    port: 587
+she:
+  mail: 2235704415@qq.com
+  mail2: 804305920@qq.com
+  mail3: 153494312@qq.com
+#扫描映射文件
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+#  configuration:
+#    cache-enabled: false
+#    local-cache-scope: session
+
+swagger2:
+  enable: true
+  basePackage: hcloud.platform
+  title: 含云API开发文档
+  desc:
+  termsOfServiceUrl: hcloud.platform
+  version: 1.0
+
+logging:
+  level:
+    hcloud.platform: debug
